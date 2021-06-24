@@ -9,7 +9,7 @@ import { RootService } from './root.service';
 export class AppComponent {
   title = 'fund';
   constructor(private service:RootService){
-    this.service.getInfo('/users',{}).subscribe(res => {
+    this.service.getInfo('/user',{}).subscribe(res => {
 
     })
   }

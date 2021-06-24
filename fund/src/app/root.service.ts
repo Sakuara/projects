@@ -12,6 +12,6 @@ export class RootService {
   ) { }
 
   getInfo(url:string,body:any):Observable<any>{
-    return this.http.get(url,body);
+    return this.http.get(`/1`);
   }
 }

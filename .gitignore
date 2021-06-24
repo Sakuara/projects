@@ -1,0 +1,6 @@
+fund/node_modules
+fund/package-lock.json
+fund/dist
+ng-nest/node_modules
+ng-nest/package-lock.json
+ng-nest/dist
