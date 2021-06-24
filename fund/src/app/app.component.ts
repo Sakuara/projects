@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { RootService } from './root.service';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,9 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'fund';
+  constructor(private service:RootService){
+    this.service.getInfo('/users',{}).subscribe(res => {
+
+    })
+  }
 }

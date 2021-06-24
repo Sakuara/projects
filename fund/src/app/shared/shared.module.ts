@@ -1,28 +1,26 @@
 import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { BrowserModule } from '@angular/platform-browser';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-
 import { HttpClientModule } from '@angular/common/http';
 import { RouterModule } from '@angular/router';
-import { NzButtonModule } from "ng-zorro-antd/button";
+import { SHARED_ZORRO_MODULES } from './shared-zorro.module';
 
 const MODULES = [
   FormsModule,
   ReactiveFormsModule,
-  BrowserModule,
-  BrowserAnimationsModule,
   HttpClientModule,
   RouterModule,
 ];
-const ThirdLibraryModule = [
-    NzButtonModule
+const ThirdLibraryModule:any[] = [
+  ...SHARED_ZORRO_MODULES,
 ];
 const COMPONENTS:any[] = [
   
 ];
 const PIPES:any[] = [
   
+];
+const DIRECTIVES:any[] = [
+
 ];
 
 
@@ -37,6 +35,7 @@ const PIPES:any[] = [
     ...ThirdLibraryModule,
     ...COMPONENTS,
     ...PIPES,
+    ...DIRECTIVES
   ]
 })
 export class SharedModule { }

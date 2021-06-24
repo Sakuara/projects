@@ -6,13 +6,19 @@ module.exports = {
       options: {
           lessOptions: {
               modifyVars: { // 修改主题变量
-                'primary-color': '#1DA57A',
-                'link-color': '#1DA57A',
-                'border-radius-base': '2px'
+                // 's
               },
               javascriptEnabled: true
           }
       }
     }]
+  },
+  devServer: {
+    proxy: {
+      '/api': {
+        target: 'http://localhost:3000',
+        secure: false
+      }
+    },
   }
 };
