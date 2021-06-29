@@ -1,4 +1,5 @@
 import { Controller, Get } from '@nestjs/common';
+import { Observable, of } from 'rxjs';
 import { User } from './schemas/user.schema';
 import { UserService } from './user.service';
 
@@ -10,7 +11,10 @@ export class UserController {
     }
 
     @Get()
-    getUsersInfo():Promise<User[]> {
-        return this.userService.findAll();
+    async getUsersInfo():Promise<Observable<{ code: number; data: any[]; message: string; }>> {
+        let userList = await this.userService.findAll();
+        console.log(userList);
+        return of({code:200,data:userList,message:'success'});
+        // return this.userService.findAll();
     }
 }
