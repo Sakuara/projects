@@ -1,4 +1,9 @@
 /* You can add global styles to this file, and also import other style files */
-
 html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+body { font-family: Roboto, "Helvetica Neue", Arial, sans-serif;}
+a{text-decoration: none;}
+ul,li{list-style-type: none;}
+html,body,h1,h2,h3,h4,h5,h6,div,p,a,ul,li,nav,article,section,main,em,strong{
+    margin: 0;
+    padding: 0;
+}

@@ -1,0 +1,10 @@
+<nav class="header">
+  <div>
+    <ul class="nav">
+      <li *ngFor="let item of navItems;let i=index;"><a [href]="item.link">{{item.name}}</a></li>
+    </ul>
+    <ul>
+        <li *ngFor="let item of authNav;let i=index;"><a [href]="item.link">{{item.name}}</a></li>
+    </ul>
+  </div>
+</nav>

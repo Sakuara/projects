@@ -3,7 +3,9 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import {HttpClientModule} from '@angular/common/http';
 import {SHARED_MATERIAL_MODULE} from './shared.material.module';
 import { RouterModule } from '@angular/router';
+import { CommonModule } from '@angular/common';
 const MODULES:any[] = [
+  CommonModule,
   ReactiveFormsModule,
   FormsModule,
   HttpClientModule,
@@ -12,6 +14,10 @@ const MODULES:any[] = [
 
 const THIRD_MODULES:any[] = [
   SHARED_MATERIAL_MODULE
+]
+
+const COMPONENTS:any[] = [
+  
 ]
 
 const PIPES: any[] = [
@@ -31,6 +37,7 @@ const DIRECTIVES:any[] = [
   exports: [
     ...MODULES,
     ...THIRD_MODULES,
+    ...COMPONENTS,
     ...PIPES,
     ...DIRECTIVES
   ]

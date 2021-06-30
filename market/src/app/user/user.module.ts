@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { SharedModule } from '../shared';
+import { UserRoutingModule } from './user-rooting.module';
 import { UserComponent } from './user.component';
 
 
@@ -9,7 +10,8 @@ import { UserComponent } from './user.component';
     UserComponent
   ],
   imports: [
-    SharedModule
+    SharedModule,
+    UserRoutingModule
   ]
 })
 export class UserModule { }
