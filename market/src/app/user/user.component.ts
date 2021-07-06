@@ -15,8 +15,18 @@ export class UserComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  queryUsers() {
+  queryUsers(): void {
     this.userService.getUserList().subscribe(res => {
+      console.log(res.data);
+    })
+  }
+
+  createUser(): void{
+    let params = {
+      username: 'kavi',
+      password: '123456'
+    }
+    this.userService.createUser(params).subscribe(res => {
       console.log(res.data);
     })
   }
