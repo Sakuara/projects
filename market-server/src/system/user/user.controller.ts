@@ -28,6 +28,6 @@ export class UserController {
             return of({code:200,data:null,message:'用户名已存在'});
         }
         let result =await this.userService.createUser(createUserDto);
-        return of({code:200,data:result,message:'success'});
+        return of({code:0,data:result,message:'success'});
     }
 }
