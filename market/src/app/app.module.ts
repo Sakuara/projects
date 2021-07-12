@@ -7,6 +7,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CoreModule } from './core';
 import { HeaderComponent,FooterComponent,SharedModule } from './shared';
 import { UserModule } from './user/user.module';
+import { HomeModule } from './home/home.module';
 
 @NgModule({
   declarations: [
@@ -18,6 +19,7 @@ import { UserModule } from './user/user.module';
     CoreModule,
     SharedModule,
     UserModule,
+    HomeModule,
     AppRoutingModule,
   ],
   providers: [],

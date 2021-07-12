@@ -3,8 +3,9 @@ import { RouterModule, Routes, PreloadAllModules } from '@angular/router';
 import { AppComponent } from './app.component';
 
 const routes: Routes = [
-  { path: 'user', loadChildren: () => import('./user/user.module').then(m => m.UserModule) },
-  { path: '', redirectTo: 'user', pathMatch: 'full' },
+  { path: 'login', loadChildren: () => import('./user/user.module').then(m => m.UserModule) },
+  { path: 'home', loadChildren: () => import('./home/home.module').then(m => m.HomeModule) },
+  { path: '', redirectTo: 'login', pathMatch: 'full' },
 ];
 
 @NgModule({

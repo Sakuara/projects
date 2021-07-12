@@ -2,9 +2,14 @@ import { Module } from '@nestjs/common';
 import { MongooseModule } from '@nestjs/mongoose';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
-import { SystemModule } from './system/system.module';
 import { AuthModule } from './auth/auth.module';
+import { RoleModule } from './system/role/role.module';
+import { UserModule } from './system/user/user.module';
 
+const SYSTEM_MODULES = [
+  UserModule,
+  RoleModule
+]
 @Module({
   imports: [
     MongooseModule.forRoot('mongodb://localhost:27017/test',{
@@ -12,7 +17,7 @@ import { AuthModule } from './auth/auth.module';
       user: 'test',
       pass: "123456"
     }),
-    SystemModule,
+    ...SYSTEM_MODULES,
     AuthModule
   ],
   controllers: [AppController],

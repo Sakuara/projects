@@ -1,6 +1,6 @@
 <div class="login-page">
     <form fxLayout="row" fxLayout.xs="column" fxLayoutAlign="center" (ngSubmit)="onSubmit()" [formGroup]="form">
-      <mat-card fxFlex="0 1 20rem">
+      <mat-card fxFlex="0 1 30rem">
         <mat-card-header>
           <mat-card-title>登录</mat-card-title>
         </mat-card-header>
@@ -13,11 +13,9 @@
             <input matInput placeholder="密码" type="password" formControlName="password">
             <mat-error>密码不正确哦</mat-error>
           </mat-form-field>
-          <button class="full-width" color="primary" mat-raised-button type="submit" [disabled]="!form.valid">登录</button>
         </mat-card-content>
-        <mat-card-actions class="text-right">
-          <p>还没有账户？ <a routerLink="/register">注册</a></p>
-          <p>忘记 <a routerLink="/forgot">密码？</a></p>
+        <mat-card-actions>
+          <button class="full-width" color="primary" mat-raised-button type="submit" [disabled]="!form.valid">登录</button>
         </mat-card-actions>
       </mat-card>
     </form>

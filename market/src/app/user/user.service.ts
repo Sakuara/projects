@@ -18,4 +18,8 @@ export class UserService {
   createUser(body:any): Observable<any>{
     return this.http.post('api/user',body);
   }
+
+  login(body:any): Observable<any>{
+    return this.http.post('api/auth/login', body);
+  }
 }
