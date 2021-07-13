@@ -1,7 +1,7 @@
 import { Body, Controller, Get, Post } from '@nestjs/common';
 import { of } from 'rxjs';
 import { AppService } from './app.service';
-import { AuthService } from './auth/auth.service';
+import { AuthService } from './system/auth/auth.service';
 import { LoginUserDto } from './system/user/dto';
 import { UserService } from './system/user/user.service';
 

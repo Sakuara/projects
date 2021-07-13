@@ -1,21 +1,17 @@
 import { Query } from '@nestjs/common';
-import { Body, Controller, Get, Post, Request, UseGuards } from '@nestjs/common';
-import { AuthGuard } from '@nestjs/passport';
-import { ApiBody } from '@nestjs/swagger';
+import { Controller, Get, Request, UseGuards } from '@nestjs/common';
 import { Observable, of } from 'rxjs';
-import { JwtGuard } from 'src/auth/guards/jwt.guard';
-import { Roles } from 'src/core/decorator';
-import { LoginUserDto, CreateUserDto } from './dto';
-import { User } from './schemas/user.schema';
+import { JwtGuard } from '@core/guards';
 import { UserService } from './user.service';
+import { Roles } from '@core/decorators';
 
 @Controller('user')
 export class UserController {
 
     constructor(
         private readonly userService: UserService,
-        ) {
-            
+    ) {
+
     }
 
     @Get()
@@ -27,12 +23,12 @@ export class UserController {
 
     @UseGuards(new JwtGuard('jwt'))
     @Get('profile')
-    getProfile(@Request() req,@Query('username') username) {
+    getProfile(@Request() req, @Query('username') username) {
         // verify username
-        if(username == req.user.username){
-            return {code: 200, message:'success',data:null}
-        }else{
-            return {code:201,message:'error',data:null}
+        if (username == req.user.username) {
+            return { code: 200, message: 'success', data: null }
+        } else {
+            return { code: 201, message: 'error', data: null }
         }
     }
 

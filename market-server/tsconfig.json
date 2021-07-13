@@ -12,12 +12,17 @@
     "baseUrl": "./",
     "incremental": true,
     "paths": {
+      "@core": ["src/core"],
+      "@core/*":["src/core/*"],
       "@app/db": [
         "libs/db/src"
       ],
       "@app/db/*": [
         "libs/db/src/*"
       ]
-    }
-  }
+    },
+  },
+  "include": [
+    "src/**/*"
+  ]
 }

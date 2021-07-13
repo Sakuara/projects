@@ -2,7 +2,7 @@ import { Module } from '@nestjs/common';
 import { MongooseModule } from '@nestjs/mongoose';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
-import { AuthModule } from './auth/auth.module';
+import { AuthModule } from './system/auth/auth.module';
 import { RoleModule } from './system/role/role.module';
 import { UserModule } from './system/user/user.module';
 
